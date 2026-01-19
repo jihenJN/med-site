@@ -1,0 +1,93 @@
+/* =========================
+   1. CSS RESET / NORMALIZE
+   ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   2. ROOT SETTINGS
+   ========================= */
+
+html {
+  font-size: 100%; /* 16px */
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   3. BODY BASE STYLES
+   ========================= */
+
+body {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  color: #111;
+  background-color: #fff;
+}
+
+/* =========================
+   4. MEDIA ELEMENTS
+   ========================= */
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================
+   5. FORM ELEMENTS
+   ========================= */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* =========================
+   6. TYPOGRAPHY FIXES
+   ========================= */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* =========================
+   7. LINKS
+   ========================= */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   8. LISTS (OPTIONAL)
+   ========================= */
+
+ul,
+ol {
+  list-style: none;
+}
