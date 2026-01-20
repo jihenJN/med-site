@@ -36,13 +36,6 @@ body {
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   color: #111;
-  background: radial-gradient(
-    circle,
-    rgba(93, 180, 172, 1) 1%,
-    rgba(42, 113, 171, 1) 100%
-  );
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 /* =========================
@@ -138,15 +131,15 @@ nav li {
 }
 
 .button {
-  background-color: rgb(15, 98, 171);
+  background-color: rgb(42, 113, 171);
   padding: 0.5rem 1rem;
   border-radius: 0.4rem;
   font-size: 0.85rem;
   font-weight: bold;
 }
 
-#check{
-    display: none;
+#check {
+  display: none;
 }
 .icons {
   position: absolute;
@@ -155,6 +148,52 @@ nav li {
   cursor: pointer;
   display: none;
   right: 5%;
+}
+
+.hero {
+  padding: 8rem 4rem;
+  min-block-size: 80vh;
+  background-image: url("assets/wherehouse-m1.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  border-image-source: linear-gradient(
+    329deg,
+    rgba(42, 113, 171, 0.9) 10%,
+    rgba(115, 217, 205,0.8) 50%,
+    rgba(42, 113, 171, 0.9) 90%
+  );
+  border-image-slice: fill 1;
+}
+
+.hero-inner {
+
+  max-width: 750px;
+ text-align: center;
+
+  
+}
+
+.hero h1 {
+  font-weight: bold;
+  line-height: 4.5rem;
+   text-shadow:  black 0px 1px 3px;
+  
+}
+
+.hero p {
+  font-weight:bold;
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+   text-shadow:   black .5px .5px .5px;
 }
 
 /*====break points===*/
@@ -172,15 +211,15 @@ nav li {
     display: block;
   }
 
-  #check:checked~.icons #menu-icon{
+  #check:checked ~ .icons #menu-icon {
     display: none;
   }
 
-  .icons #close-icon{
-      display: none;
+  .icons #close-icon {
+    display: none;
   }
 
- #check:checked~.icons #close-icon{
+  #check:checked ~ .icons #close-icon {
     display: block;
   }
   nav {
@@ -191,35 +230,31 @@ nav li {
     height: 0;
     background: rgb(0, 0, 0, 0.1);
     backdrop-filter: blur(70px);
-    box-shadow: 0 .5rem 1rem  rgb(0, 0, 0, 0.1) ;
-    transition: .3s ease;
+    box-shadow: 0 0.5rem 1rem rgb(0, 0, 0, 0.1);
+    transition: 0.3s ease;
     overflow: hidden;
   }
 
-   #check:checked~ nav{
-     height: 20rem;
-   }
+  #check:checked ~ nav {
+    height: 20rem;
+  }
 
-   nav ul {
-      display: flex;
-    flex-direction: column; 
-   margin :1.05rem 0;
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 1.05rem 0;
     font-size: 1.1rem;
-
-       
-   }
+  }
   nav a {
-    display: block;   
+    display: block;
     transform: translateY(-50px);
     opacity: 0;
-    transition: .3s ease;
-
+    transition: 0.3s ease;
   }
 
-  #check:checked~ nav a {
-     transform: translateY(0);
-     opacity: 1;
-     transition-delay: calc(.15s * var(--i));
+  #check:checked ~ nav a {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: calc(0.15s * var(--i));
   }
-
 }
