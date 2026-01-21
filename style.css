@@ -31,7 +31,7 @@ It’s used for accessibility, scalability, and responsiveness*/
 body {
   min-height: 100vh;
   font-family:
-    Open Sans,
+    Noto Sans Syriac,
     sans-serif;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
@@ -104,6 +104,7 @@ header {
   justify-content: space-between;
   align-items: center;
   color: #fff;
+  text-shadow: rgba(42, 113, 171, 1) 0px 1px 1px;
   font-weight: bold;
   z-index: 100;
 }
@@ -168,37 +169,95 @@ nav li {
   border-image-source: linear-gradient(
     329deg,
     rgba(42, 113, 171, 0.9) 10%,
-    rgba(115, 217, 205,0.8) 50%,
+    rgba(115, 217, 205, 0.8) 50%,
     rgba(42, 113, 171, 0.9) 90%
   );
   border-image-slice: fill 1;
 }
 
 .hero-inner {
-
   max-width: 750px;
- text-align: center;
-
-  
+  text-align: center;
 }
 
 .hero h1 {
   font-weight: bold;
   line-height: 4.5rem;
-   text-shadow:  black 0px 1px 3px;
-  
+  text-shadow: black 0px 1px 3px;
 }
 
 .hero p {
-  font-weight:bold;
+  font-weight: bold;
   line-height: 1.5rem;
   font-size: 0.8rem;
-   text-shadow:   black .5px .5px .5px;
+  text-shadow: black 0.5px 0.5px 0.5px;
 }
+
+.apropos {
+  padding: 4rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #153558;
+}
+
+.apropos-inner {
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.apropos-imgs {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  height: 400px;
+  grid-template-rows: 1fr 1fr;
+  gap: 8px;
+}
+
+.box-0 {
+  height: 200px;
+  width: 160px;
+}
+
+.box-1 {
+  height: 200px;
+  width: 240px;
+}
+
+.box-2 {
+  height: 200px;
+  width: 408px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.8rem;
+}
+
+.apropos-text {
+  padding: 5rem 2rem;
+}
+
+.apropos p {
+  font-weight: normal;
+  line-height: 1.5rem;
+  font-size: 0.8rem;
+}
+
+.apropos h2 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+
 
 /*====break points===*/
 
-@media (max-width: 850px) {
+@media only screen and (max-width: 850px) {
   header {
     padding: 0.6rem 5%;
   }
